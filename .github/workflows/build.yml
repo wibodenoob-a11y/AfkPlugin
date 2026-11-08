@@ -1,7 +1,9 @@
 name: Build plugin
-on:
-  push:
-  workflow_dispatch:
+
+on: push
+
+workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +15,8 @@ jobs:
           java-version: '21'
       - name: Build
         run: mvn -B clean package
-        working-directory: CombatTag-source/CombatTag
-      - uses: actions/upload-artifact@v4
+      - name: upload-jar
+        uses: actions/upload-artifact@v4
         with:
           name: plugin-jar
-          path: CombatTag-source/CombatTag/target/*.jar
+          path: target/*.jar
