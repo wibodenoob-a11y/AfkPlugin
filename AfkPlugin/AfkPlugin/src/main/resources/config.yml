@@ -1,0 +1,67 @@
+afk:
+  auto-afk-seconds: 300
+  announce: true
+  tab-prefix: "<gray>[AFK]</gray> "
+  activity:
+    min-move-distance: 0.1
+    count-rotation: true
+
+room:
+  block-material: RED_STAINED_GLASS
+  teleport-cooldown-seconds: 3
+  protection:
+    no-damage: true
+    no-block-break: true
+    no-block-place: true
+    no-hunger: true
+
+coins:
+  interval-seconds: 120
+  actionbar-countdown: true
+  sound: true
+  sound-name: ENTITY_EXPERIENCE_ORB_PICKUP
+
+scoreboard:
+  enabled: true
+  title: "<gold><bold>OskarSMP</bold></gold>"
+  ip: "oskarsmp.ddns.net:25587"
+
+kits:
+  # {kit} and {player} are replaced; this runs from the console.
+  give-command: "kit give {kit} {player}"
+
+shop:
+  ranks:
+    "Oskar":
+      group: "oskar"
+      duration: "3d"
+      price: 500
+    "Oskar+":
+      group: "oskar+"
+      duration: "3d"
+      price: 1000
+    "OskarVIP":
+      group: "oskarvip"
+      duration: "3d"
+      price: 2000
+    "OskarVIP+":
+      group: "oskarvip+"
+      duration: "3d"
+      price: 3500
+  kits:
+    "Oskar-Rank":
+      kit: "Oskar-Rank"
+      price: 200
+    "Oskar+-Rank":
+      kit: "Oskar+-Rank"
+      price: 350
+    "OskarVIP-Rank":
+      kit: "OskarVIP-Rank"
+      price: 750
+    "OskarVIP+-Rank":
+      kit: "OskarVIP+-Rank"
+      price: 1100
+
+messages:
+  now-afk: "<gray><player> is now AFK.</gray>"
+  no-longer-afk: "<gray><player> is no longer AFK.</gray>"

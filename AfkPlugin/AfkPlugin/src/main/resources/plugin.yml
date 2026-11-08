@@ -1,0 +1,33 @@
+name: AfkPlugin
+version: '${version}'
+main: dev.afk.AfkPlugin
+api-version: '1.21'
+description: AFK room with Oskar coins and a coin shop
+softdepend: [LuckPerms, PlayerKits2]
+commands:
+  afk:
+    description: AFK commands
+    usage: /afk [list|wand|setroom|setspawn|setip|reload]
+    permission: afk.use
+  coins:
+    description: Oskar coin balance and admin tools
+    usage: /coins [give|giveall|take]
+  coinshop:
+    description: Open the Oskar coin shop
+    permission: coins.shop
+  baltop:
+    description: Top Oskar coin balances
+    permission: coins.use
+permissions:
+  afk.use:
+    default: true
+  afk.list:
+    default: true
+  afk.admin:
+    default: op
+  coins.use:
+    default: true
+  coins.shop:
+    default: true
+  coins.admin:
+    default: op
